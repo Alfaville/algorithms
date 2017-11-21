@@ -20,7 +20,7 @@ public class InsertionSort {
 	private static void ordenar(Produto produtos[]) {		
 		for (int atual = 0; atual < produtos.length; atual++) {
 			int analise = atual;
-			while(produtos[analise].getPreco() < produtos[analise - 1].getPreco()) {
+			while(analise > 0 && produtos[analise].getPreco() < produtos[analise - 1].getPreco()) {
 				Produto produtoAnalise = produtos[analise];
 				Produto produtoAnaliseMenos1 = produtos[analise -1];
 				produtos[analise] = produtoAnaliseMenos1;
