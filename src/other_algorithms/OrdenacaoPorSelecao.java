@@ -17,7 +17,16 @@ public class OrdenacaoPorSelecao {
 		produtos[4] = new Produto("Nokia", 50);
 		produtos[2] = new Produto("Iphone 7", 3000);
 		
-		OrdenacaoPorSelecao.ordenar(produtos);
+		System.out.println("Não ordenado:");
+		for(Produto produto : produtos) {			
+			System.out.println(produto.getNome() + " custa " + produto.getPreco());
+		};	
+				
+		System.out.println("\n");
+		OrdenacaoPorSelecao.ordenar(produtos);		
+		System.out.println("\n");
+		
+		System.out.println("Ordenado:");
 		for(Produto produto : produtos) {
 			System.out.println(produto.getNome() + " custa " + produto.getPreco());
 		};		
@@ -25,11 +34,13 @@ public class OrdenacaoPorSelecao {
 	
 	private static void ordenar(Produto produtos[]) {
 		for (int atual = 0; atual < produtos.length - 1; atual++) {
+			System.out.println("Estou na posição " + atual);
 			int menor = OrdenacaoPorSelecao.buscaMenor(produtos, atual);
 			Produto produtoAtual = produtos[atual];
 			Produto produtoMenor = produtos[menor];
 			produtos[atual] = produtoMenor;
 			produtos[menor] = produtoAtual;
+			System.out.println("posição[" + atual + "] = " + produtos[atual].getPreco() + " trocada com a posição[" + menor + "] = " + produtos[menor].getPreco());
 		}
 	}
 	
