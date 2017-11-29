@@ -5,15 +5,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CamelCase {
-
+	
 	private static final String PATTERN = "[A-Z]";
 	
 	private static int camelCase(String word) {		
 		if("".equals(word.trim()) && (word.length() < 1 || word.length() > Math.pow(10, 5)))
 			return 0;		
 		int result = 1;
-		Pattern pattern = Pattern.compile(PATTERN);
-		Matcher matcher = pattern.matcher(word);
+		Matcher matcher = Pattern.compile(PATTERN).matcher(word);
         while (matcher.find()) result++;        
 		return result;
 	}
