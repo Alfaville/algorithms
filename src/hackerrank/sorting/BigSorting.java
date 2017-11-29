@@ -8,16 +8,10 @@ public class BigSorting {
 
 	private static void sort(String[] unsorted) {
 		List<String> sorted = Arrays.asList(unsorted);
-		sorted.sort((x, y) -> {
-			if(x.length() != y.length())
-				return x.length() - y.length();
-			for (int i = 0; i < x.length(); i++) {
-				char left = x.charAt(i);
-				char right = y.charAt(i);
-				if (left != right)
-					return left - right;
-			}
-			return 0;
+		sorted.sort((x, y) -> {			
+	        if (x.length() == y.length()) 
+	            return x.compareTo(y);	        
+	        return x.length() - y.length();			
 		});
 		sorted.forEach(System.out::println);
 	}
