@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CompareTriplets {	
 	
-	public static int[] solve(int a0, int a1, int a2, int b0, int b1, int b2) {
+	private static int[] solve(int a0, int a1, int a2, int b0, int b1, int b2) {
 		final int[] alice = {a0, a1, a2}, bob = {b0, b1, b2};		
 		int a = 0, b = 0;
 		for (int i = 0; i < 3; i++) {
@@ -17,7 +17,7 @@ public class CompareTriplets {
 		return new int[]{a,b};
     }
 	
-	private static final boolean valideInput(int point) {
+	private static boolean valideInput(int point) {
 		return (point >= 1 && point <= 100);
 	}
 
@@ -29,7 +29,7 @@ public class CompareTriplets {
         int b0 = in.nextInt();
         int b1 = in.nextInt();
         int b2 = in.nextInt();
-        int[] result = solve(a0, a1, a2, b0, b1, b2);
+        int[] result = CompareTriplets.solve(a0, a1, a2, b0, b1, b2);
         for (int i = 0; i < result.length; i++) {
             System.out.print(result[i] + (i != result.length - 1 ? " " : ""));
         }
