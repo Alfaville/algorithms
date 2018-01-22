@@ -2,6 +2,8 @@ package hackerrank.warmup;
 
 import java.util.Scanner;
 
+import utils.TimeAlgorithm;
+
 public class Staircase {
 
 	private static final String HASHTAG = "#", SPACE = " ";
@@ -26,10 +28,14 @@ public class Staircase {
 	}
 
 	public static void main(String[] args) {
+		TimeAlgorithm.start();
+
 		Scanner in = new Scanner(System.in);
 		int n = in.nextInt();
 		staircase(n);
 		in.close();
+
+		TimeAlgorithm.result();
 	}
 
 }
