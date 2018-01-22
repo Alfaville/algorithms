@@ -19,8 +19,9 @@ public class TimeConversion {
     }
 
     public static void main(String[] args) throws ParseException {
-        Scanner in = new Scanner(System.in);
+		Scanner in = new Scanner(System.in);
         String s = in.next();
-        timeConversion(s).ifPresent(System.out::println);                
+        timeConversion(s).ifPresent(System.out::println);
+        in.close();
     }
 }
