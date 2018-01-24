@@ -26,21 +26,7 @@ public class MiniMaxSum {
             sum += nums[i];
         }
         System.out.println( (sum - max) + " " + (sum - min));
-       
+        in.close();
     }
 	
 }
-
-
-/**
-
- 1 2 3 4 5
- 
- max = 5; min = 1; sum = 15
- 
- true -> (2+3+4 = 4+3+2) - common
-
- 15 - 1 = 14
- 15 - 5 = 10
-
-*/
