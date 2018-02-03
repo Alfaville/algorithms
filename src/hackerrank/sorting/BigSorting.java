@@ -26,6 +26,7 @@ public class BigSorting {
             unsorted[unsorted_i] = in.next();
         }    
         sort(unsorted);
+        in.close();
     }
 
 }
