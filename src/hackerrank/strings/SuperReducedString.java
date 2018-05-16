@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class SuperReducedString {
 
-	private static String super_reduced_string(StringBuilder s) {
+	private static String superReducedString(StringBuilder s) {
 		final String[] values = s.toString().split("");
 		for (int i = 0; i < values.length; i++) {
 			String regex = String.format("[%s]{2}", values[i]);
@@ -19,7 +19,7 @@ public class SuperReducedString {
 			final boolean CONSTRAINT = (s.length() >= 1 && s.length() <= 100);
 			if (!CONSTRAINT)
 				return;
-			String result = super_reduced_string(new StringBuilder(s));
+			String result = superReducedString(new StringBuilder(s));
 			System.out.println(result);
 		}
 	}
