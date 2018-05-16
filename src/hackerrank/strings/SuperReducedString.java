@@ -2,6 +2,7 @@ package hackerrank.strings;
 
 import java.util.Scanner;
 
+//https://www.hackerrank.com/challenges/reduced-string/problem
 public class SuperReducedString {
 
 	private static String superReducedString(StringBuilder s) {
