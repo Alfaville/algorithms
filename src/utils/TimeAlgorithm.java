@@ -6,7 +6,7 @@ package utils;
  * @author alfaville
  *
  */
-public class TimeAlgorithm {
+public final class TimeAlgorithm {
 
 	private static long startTime;
 	
