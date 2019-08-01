@@ -5,9 +5,7 @@ import java.util.Scanner;
 //https://www.hackerrank.com/challenges/kangaroo/problem
 class Kangaroo {
 
-
-    //(x1-x2) %(v1-v2) == 0
-    static String kangaroo(final int position1, int jump1, final int position2, int jump2) {
+    static String kangaroo(int position1, int jump1, int position2, int jump2) {
         final String NO = "NO", YES = "YES";
         int p1 = position1;
         int p2 = position2;
