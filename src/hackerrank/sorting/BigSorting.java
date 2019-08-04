@@ -3,16 +3,13 @@ package hackerrank.sorting;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+import java.util.function.Predicate;
 
 public class BigSorting {
 
 	private static void sort(String[] unsorted) {
 		List<String> sorted = Arrays.asList(unsorted);
-		sorted.sort((x, y) -> {			
-	        if (x.length() == y.length()) 
-	            return x.compareTo(y);	        
-	        return x.length() - y.length();			
-		});
+		sorted.sort((x, y) -> (x.length() == y.length()) ? x.compareTo(y) : x.length() - y.length());
 		sorted.forEach(System.out::println);
 	}
 	
