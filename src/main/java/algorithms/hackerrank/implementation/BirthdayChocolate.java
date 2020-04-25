@@ -1,5 +1,7 @@
 package algorithms.hackerrank.implementation;
 
+import algorithms.utils.TimeAlgorithm;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -14,6 +16,7 @@ import static java.util.stream.Collectors.toList;
 public class BirthdayChocolate {
 
     static long birthday(List<Integer> squaresChocolate, int day, int month) {
+        TimeAlgorithm.start();
         long result = 0;
         if(month > 1) {
             for (int i = 0; i < squaresChocolate.size(); i++) {
@@ -30,6 +33,7 @@ public class BirthdayChocolate {
         } else {
             result = squaresChocolate.stream().filter(value -> value == day).count();
         }
+        TimeAlgorithm.result();
         return result;
     }
 

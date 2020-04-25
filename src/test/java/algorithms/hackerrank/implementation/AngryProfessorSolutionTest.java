@@ -2,8 +2,6 @@ package algorithms.hackerrank.implementation;
 
 import org.junit.jupiter.api.*;
 
-import java.util.concurrent.TimeUnit;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName("Angry Professor")
@@ -156,6 +154,7 @@ public class AngryProfessorSolutionTest {
                 -1, 10, -5, -3, -100, 100, -2, 5, 99, 18
                 -1, 10, -5, -3, -100, 100, -2, 5, 99, 18
         };
+
         assertEquals(
                 "YES",
                 new AngryProfessorSolution().angryProfessor(500, a)
