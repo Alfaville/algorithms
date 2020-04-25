@@ -19,9 +19,9 @@ public final class TimeAlgorithm {
 
     public static void result() {
         long elapsedTime = nanoTime() - startTime;
-        double elapsedTimeInSecond = (double) elapsedTime / 1_000_000_000; // 1 second = 1_000_000_000 nano seconds
-        long convert = TimeUnit.MILLISECONDS.convert(elapsedTime, TimeUnit.NANOSECONDS);
-        System.out.println("End Time: " + convert);
+        System.out.println(String.format("End Time nanoseconds: %s", TimeUnit.NANOSECONDS.convert(elapsedTime, TimeUnit.NANOSECONDS)));
+        System.out.println(String.format("End Time miliseconds: %s", TimeUnit.MILLISECONDS.convert(elapsedTime, TimeUnit.NANOSECONDS)));
+        System.out.println(String.format("End Time seconds: %s", TimeUnit.SECONDS.convert(elapsedTime, TimeUnit.NANOSECONDS)));
     }
 
 }
