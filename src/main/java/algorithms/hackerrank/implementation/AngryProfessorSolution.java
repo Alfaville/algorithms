@@ -1,6 +1,6 @@
 package algorithms.hackerrank.implementation;
 
-import algorithms.utils.TimeAlgorithm;
+import algorithms.utils.AlgorithmTime;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -38,9 +38,9 @@ public class AngryProfessorSolution {
                     a[i] = aItem;
                 }
 
-                TimeAlgorithm.start();
+                AlgorithmTime.start();
                 System.out.println(angryProfessor(k, a));
-                TimeAlgorithm.result();
+                AlgorithmTime.result();
             }
         }
     }

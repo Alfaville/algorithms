@@ -1,6 +1,6 @@
 package algorithms.hackerrank.warmup;
 
-import algorithms.utils.TimeAlgorithm;
+import algorithms.utils.AlgorithmTime;
 
 import java.util.Scanner;
 
@@ -28,14 +28,14 @@ public class Staircase {
 	}
 
 	public static void main(String[] args) {
-		TimeAlgorithm.start();
+		AlgorithmTime.start();
 
 		Scanner in = new Scanner(System.in);
 		int n = in.nextInt();
 		staircase(n);
 		in.close();
 
-		TimeAlgorithm.result();
+		AlgorithmTime.result();
 	}
 
 }
