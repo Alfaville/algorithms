@@ -1,8 +1,6 @@
 package algorithms.daily_interview_pro;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * Hi, here's your problem today. This problem was recently asked by Microsoft:
@@ -25,7 +23,6 @@ public class SortedSquareNumbers {
     //Look: https://www.geeksforgeeks.org/sort-array-converting-elements-squares/
     //Time complexity: O(n log n)
     public static int[] solution(int[] numbers) {
-        List<String> aa = new ArrayList<>();
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = numbers[i] * numbers[i];
         }
