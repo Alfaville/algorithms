@@ -64,10 +64,9 @@ public class DecryptPassword {
             char ch = decryptPassword.charAt(i);
 
             if(Character.isDigit(ch) && Character.getNumericValue(ch) != 0) {
-                numericMap.put(chaNumericCount, ch);
+                numericMap.put(chaNumericCount++, ch);
                 decryptPassword.deleteCharAt(i);
                 i = -1;
-                chaNumericCount++;
             }
 
             if(Character.isDigit(ch) && Character.getNumericValue(ch) == 0) {
