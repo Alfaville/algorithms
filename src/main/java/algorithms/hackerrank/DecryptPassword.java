@@ -62,15 +62,16 @@ public class DecryptPassword {
         Map<Integer, Character> numericMap = new HashMap<>();
         for (int i = 0; i < decryptPassword.length(); i++) {
             char ch = decryptPassword.charAt(i);
-
             if(Character.isDigit(ch) && Character.getNumericValue(ch) != 0) {
                 numericMap.put(chaNumericCount++, ch);
                 decryptPassword.deleteCharAt(i);
                 i = -1;
+                continue;
             }
 
             if(Character.isDigit(ch) && Character.getNumericValue(ch) == 0) {
                 decryptPassword.replace(i,i+1, numericMap.get(--chaNumericCount).toString());
+                continue;
             }
 
             if(Character.isUpperCase(beforeAux) && Character.isLowerCase(ch)) {
@@ -82,4 +83,3 @@ public class DecryptPassword {
     }
 
 }
-

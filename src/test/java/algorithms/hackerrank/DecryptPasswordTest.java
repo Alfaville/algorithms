@@ -33,4 +33,12 @@ public class DecryptPasswordTest {
         );
     }
 
+    @Test
+    public void DecryptPasswordTest4() {
+        assertEquals(
+                "fElipE4lF4v1ll3",
+                DecryptPassword.decryptPassword("3144Ef*liEp*0Fl*0v0ll0")
+        );
+    }
+
 }
