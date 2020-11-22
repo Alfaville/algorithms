@@ -43,7 +43,7 @@ public class AddTwoNumbersTest {
 
         assertEquals(
                 "ListNode{val=7, next=ListNode{val=0, next=ListNode{val=8, next=null}}}",
-                addTwoNumbers.solution(lnFirst, lnSeconde).toString()
+                addTwoNumbers.addTwoNumbers(lnFirst, lnSeconde).toString()
         );
     }
 
