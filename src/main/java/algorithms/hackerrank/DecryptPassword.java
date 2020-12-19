@@ -6,6 +6,11 @@ package algorithms.hackerrank;
 import java.util.HashMap;
 import java.util.Map;
 
+import static java.lang.Character.getNumericValue;
+import static java.lang.Character.isDigit;
+import static java.lang.Character.isLowerCase;
+import static java.lang.Character.isUpperCase;
+
 /**
  In a computer security course, you just learned about password decryption. Your fellow student has created their own password encryption method, and they’ve asked you to test how secure it is. Your task is to recover the original password given the encrypted password provided to you by your classmate.
 
@@ -62,19 +67,19 @@ public class DecryptPassword {
         Map<Integer, Character> numericMap = new HashMap<>();
         for (int i = 0; i < decryptPassword.length(); i++) {
             char ch = decryptPassword.charAt(i);
-            if(Character.isDigit(ch) && Character.getNumericValue(ch) != 0) {
+            if(isDigit(ch) && getNumericValue(ch) != 0) {
                 numericMap.put(chaNumericCount++, ch);
                 decryptPassword.deleteCharAt(i);
                 i = -1;
                 continue;
             }
 
-            if(Character.isDigit(ch) && Character.getNumericValue(ch) == 0) {
+            if(isDigit(ch) && getNumericValue(ch) == 0) {
                 decryptPassword.replace(i,i+1, numericMap.get(--chaNumericCount).toString());
                 continue;
             }
 
-            if(Character.isUpperCase(beforeAux) && Character.isLowerCase(ch)) {
+            if(isUpperCase(beforeAux) && isLowerCase(ch)) {
                 decryptPassword.replace(i - 1, i + 2, ch + "" + beforeAux);
             }
             beforeAux = ch;

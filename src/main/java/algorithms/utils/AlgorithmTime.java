@@ -22,6 +22,7 @@ public final class AlgorithmTime {
         long elapsedTime = nanoTime() - startTime;
         System.out.println(String.format("End Time seconds: %s", TimeUnit.SECONDS.convert(elapsedTime, TimeUnit.NANOSECONDS)));
         System.out.println(String.format("End Time milliseconds: %s", TimeUnit.MILLISECONDS.convert(elapsedTime, TimeUnit.NANOSECONDS)));
+        System.out.println(String.format("End Time nanoseconds: %s", TimeUnit.NANOSECONDS.convert(elapsedTime, TimeUnit.NANOSECONDS)));
     }
 
 }
