@@ -3,13 +3,17 @@
  */
 package algorithms.hackerrank;
 
+import algorithms.hackerrank.challenges.DecryptPassword;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@DisplayName("Decrypt Password Problem")
 public class DecryptPasswordTest {
 
     @Test
+    @DisplayName("Scenario 01")
     public void DecryptPasswordTestt1() {
         assertEquals(
                 "hAck3rr4nk",
@@ -18,6 +22,7 @@ public class DecryptPasswordTest {
     }
 
     @Test
+    @DisplayName("Scenario 02")
     public void DecryptPasswordTest2() {
         assertEquals(
                 "poTaTO",
@@ -26,6 +31,7 @@ public class DecryptPasswordTest {
     }
 
     @Test
+    @DisplayName("Scenario 03")
     public void DecryptPasswordTest3() {
         assertEquals(
                 "aP1pL5e",
@@ -34,6 +40,7 @@ public class DecryptPasswordTest {
     }
 
     @Test
+    @DisplayName("Scenario 04")
     public void DecryptPasswordTest4() {
         assertEquals(
                 "fElipE4lF4v1ll3",

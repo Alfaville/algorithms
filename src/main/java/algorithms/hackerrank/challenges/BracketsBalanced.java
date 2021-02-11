@@ -1,4 +1,4 @@
-package algorithms.hackerrank;
+package algorithms.hackerrank.challenges;
 
 import java.io.IOException;
 import java.util.Arrays;
