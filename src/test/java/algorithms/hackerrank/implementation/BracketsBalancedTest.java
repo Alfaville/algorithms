@@ -1,6 +1,6 @@
 package algorithms.hackerrank.implementation;
 
-import algorithms.hackerrank.BracketsBalanced;
+import algorithms.hackerrank.challenges.BracketsBalanced;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
