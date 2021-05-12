@@ -15,7 +15,7 @@ class TwoSumTest {
     }
 
     @Test
-    fun scenario2() {
+    fun `scenario 2 - Test with hashtable`() {
         val k = 6000
         Assertions.assertArrayEquals(
             intArrayOf(2999, 3001),
@@ -24,7 +24,7 @@ class TwoSumTest {
     }
 
     @Test
-    fun scenario3() {
+    fun `scenario 3 - Test with hashtable`() {
         val k = -1
         Assertions.assertThrows(
             IllegalArgumentException::class.java
