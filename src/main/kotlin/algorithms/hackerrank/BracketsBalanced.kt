@@ -1,7 +1,5 @@
 package algorithms.hackerrank
 
-import java.util.Stack
-
 /**
  * Given a list of strings of bracket characters: {}(), the string of brackets is balanced under the following conditions:
  * 1. It is the empty string
@@ -31,54 +29,45 @@ import java.util.Stack
  * - Each string has fewer then 50 characters
  */
 fun main(args: Array<String>) {
-    reduceBracket(listOf("{}()", "{()}", "({()})"))
+    listOf("{}()", "{()}", "({()})")
+        .forEach { println("$it - ${isBalancedWithStack(it)}") }
     println("-".repeat(10))
 
-    reduceBracket(listOf("({)}", "((", "}{", "({()})", "{}}{", "{}}}"))
+    listOf("({)}", "((", "}{", "({()})", "{}}{", "{}}}")
+        .forEach { println("$it - ${isBalancedWithStack(it)}") }
     println("-".repeat(10))
 
-    reduceBracket(listOf("{}(", "({)}", "((", "}{"))
+    listOf("{}(", "({)}", "((", "}{")
+        .forEach { println("$it - ${isBalancedWithStack(it)}") }
     println("-".repeat(10))
 
-    listOf("{}()", "{()}", "({()})").forEach { isBalanced(it) }
+    listOf("{}()", "{()}", "({()})")
+        .forEach { println("$it - ${isBalancedWithStack(it)}") }
     println("-".repeat(10))
 
-    listOf("({)}", "((", "}{", "({()})", "{}}{", "{}}}").forEach { isBalanced(it) }
+    listOf("({)}", "((", "}{", "({()})", "{}}{", "{}}}")
+        .forEach { println("$it - ${isBalancedWithStack(it)}") }
     println("-".repeat(10))
 
-    listOf("{}(", "({)}", "((", "}{").forEach { isBalanced(it) }
+    listOf("{}(", "({)}", "((", "}{")
+        .forEach { println("$it - ${isBalancedWithStack(it)}") }
 }
 
-fun reduceBracket(bracket: List<String>) {
-    bracket.forEach {
-        var isBalanced = reduceBracket(it)
-        println("$it - $isBalanced")
-    }
-}
-
-fun reduceBracket(bracket: String): Boolean {
-    val replaceBracket = bracket.replace("()", "").replace("{}", "")
-    if(replaceBracket != bracket)
-        return reduceBracket(replaceBracket)
-    else
-       return replaceBracket.isEmpty()
-}
-
-fun isBalanced(expression: String): Boolean {
+fun isBalancedWithStack(expression: String): Boolean {
     return if (expression.length % 2 == 1) false
     else {
-        val s = Stack<Char>()
-        for (bracket in expression.toCharArray()) when (bracket) {
-            '{' -> s.push('}')
-            '(' -> s.push(')')
-            '[' -> s.push(']')
+        val dequeExpression = ArrayDeque<Char>()
+        for (bracketItem in expression) when (bracketItem) {
+            '{' -> dequeExpression.addFirst('}')
+            '(' -> dequeExpression.addFirst(')')
+            '[' -> dequeExpression.addFirst(']')
             else -> {
-                if (s.isEmpty() || bracket != s.peek()) {
+                if (dequeExpression.isEmpty() || bracketItem != dequeExpression.first()) {
                     return false
                 }
-                s.pop()
+                dequeExpression.removeFirst()
             }
         }
-        s.isEmpty()
+        dequeExpression.isEmpty()
     }
 }
