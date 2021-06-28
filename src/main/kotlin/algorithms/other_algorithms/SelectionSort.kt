@@ -1,4 +1,4 @@
-package other_algorithms
+package algorithms.other_algorithms
 
 fun main(vararg: Array<String>) {
     val arr = intArrayOf(8765, 99, 1, 2, 6, 19, 20, 999, 0, -8, 78, 10, -3)

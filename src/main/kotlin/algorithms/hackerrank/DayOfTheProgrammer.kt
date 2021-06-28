@@ -3,6 +3,8 @@ package algorithms.hackerrank
 /**
  * https://www.hackerrank.com/challenges/day-of-the-programmer/problem
  */
+private const val DAY_OF_PROGRAMMER = 256
+
 fun main(args: Array<String>) {
     println(dayOfProgrammer(1800))
     println(dayOfProgrammer(1918))
@@ -11,7 +13,6 @@ fun main(args: Array<String>) {
 }
 
 fun dayOfProgrammer(year: Int): String {
-    val DAY_OF_PROGRAMMER = 256
     val constraint = (year < 1700 || year > 2700)
     if(constraint) {
         throw IllegalArgumentException("Wrong year!")
